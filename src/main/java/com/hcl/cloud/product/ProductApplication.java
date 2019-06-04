@@ -31,7 +31,7 @@ public class ProductApplication {
 
     /**
      * @param args
-     * the argument for main
+     *            the argument for main
      */
     public static void main(String[] args) {
         SpringApplication.run(ProductApplication.class, args);
