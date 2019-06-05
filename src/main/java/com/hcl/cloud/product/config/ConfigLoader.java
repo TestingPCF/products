@@ -1,23 +1,16 @@
 package com.hcl.cloud.product.config;
 
-import java.io.Serializable;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Service;
 
 /**
  * This is configuration loader class. Which pulls data at runtime.
  * @author shikhar.a
  */
-
-@Service
 @Configuration
 @RefreshScope
-public class ConfigLoader implements Serializable  {
-
-    private static final long serialVersionUID = 1L;
+public class ConfigLoader {
 
     private String exchangeName;
 
