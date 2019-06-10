@@ -4,7 +4,6 @@ import static com.hcl.cloud.product.constants.ProductConstants.SUCCESS;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.StringUtils;
@@ -19,7 +18,6 @@ import com.hcl.cloud.product.response.CreateproductRes;
  * @author BrijendraK
  *
  */
-@RefreshScope
 public class CreateProductResponseTranslator {
     static Logger log = LoggerFactory.getLogger(CreateProductResponseTranslator.class);
 
