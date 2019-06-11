@@ -20,8 +20,11 @@ import com.hcl.cloud.product.response.CreateproductRes;
  * @author BrijendraK
  *
  */
+@RefreshScope
 public class CreateProductResponseTranslator {
     static Logger log = LoggerFactory.getLogger(CreateProductResponseTranslator.class);
+    @Value("${product.create.success.msg}")
+    private String productCreateSuccessMsg;
     
     /**
      * This method is used as translator from backend to frontend.
@@ -38,8 +41,7 @@ public class CreateProductResponseTranslator {
         createproductRes.setSkuCode(createproductReq.getSkuCode());
         if (!StringUtils.isEmpty(createproductReq.getStatus())
                 && createproductReq.getStatus().equals(SUCCESS)) {
-            createproductRes.setStatus(configLoader
-                    .getProductCreateSuccessMsg());
+            createproductRes.setStatus(productCreateSuccessMsg);
             createproductRes.setStatusCode(String
                     .valueOf(HttpStatus.OK.value()));
         } else {
