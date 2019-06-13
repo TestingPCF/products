@@ -40,6 +40,7 @@ import com.hcl.cloud.product.service.ProductService;
  */
 @RefreshScope
 @RestController
+@RequestMapping("/")
 public class ProductController {
 
     @Autowired
